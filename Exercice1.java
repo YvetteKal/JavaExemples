@@ -35,7 +35,7 @@ public class Exercice1 {
             voiture[i] = new Voiture(numero,marque,nombrePortes,nombrePneus,nombreChaises); 
 
             //Affichage des informations entrées
-            System.err.println("Vous venez de créer la voiture " +(i+1)+ " de numero: " +voiture[i].getNumero()+
+            System.out.println("Vous venez de créer la voiture " +(i+1)+ " de numero: " +voiture[i].getNumero()+
              ", de marque: "+voiture[i].getMarque()+ ", au nombre des portes: "+voiture[i].getNombrePortes()+
               ", au nombre des pneus: "+voiture[i].getNombrePneus()+ 
               ", et au nombre des chaises: "+voiture[i].getNombreChaises());
@@ -43,6 +43,8 @@ public class Exercice1 {
 
         }
         scanner.close();
+        //LETS TRY TO USE THE SETTERS
+        //
 
 
     }
