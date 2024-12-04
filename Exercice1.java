@@ -29,6 +29,8 @@ public class Exercice1 {
             System.out.println("Entrer le nombre des chaises de la voiture");
             int nombreChaises = scanner.nextInt();
 
+            scanner.nextLine(); // As nextInt() leaves a nextline /n we have Consume the leftover newline character before calling nextLine again
+
             System.out.println("---------------------------------------------");
             voiture[i] = new Voiture(numero,marque,nombrePortes,nombrePneus,nombreChaises); 
 
