@@ -43,8 +43,21 @@ public class Exercice1 {
 
         }
         scanner.close();
-        //LETS TRY TO USE THE SETTERS
-        //
+        //ALTERNATIVE USING THE SETTERS
+        //create a contructor of class Voiture without parameters called a Default no-argument constructor
+        //public Voiture() {}
+        //create the arrau of voitures as usual
+        //Voiture[] voitures = new Voiture[5];
+        //in the for loop, create an object voiture that will be taking values entered by the user
+        //// Create a new Voiture object using the no-argument constructor
+        //Voiture voiture = new Voiture();
+        //Everytime a value is entered, use it to update the object variable
+        //voiture.setNumero(numero); // Set the numero using the setter
+
+        //now update the tableau voitures with thenewly set voiture object
+        //// Add the voiture object to the array
+        //voitures[i] = voiture;
+        //the rest of the code remains same
 
 
     }
