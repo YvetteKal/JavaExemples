@@ -8,10 +8,10 @@ public class Exercice1 {
         Scanner scanner = new Scanner(System.in);
 
         //creer l'objet tableau voiture de la classe Voiture
-        Voiture[] voiture = new Voiture[3]; //tableau des 5 voitures
-        Taxi[] taxi = new Taxi[2];
+        Voiture[] voiture = new Voiture[5]; //tableau des 5 voitures
+        //Taxi[] taxi = new Taxi[2];
 
-        for (int i=0; i<3; i++){
+        for (int i=0; i<5; i++){
 
             System.out.println("Voiture numero" +(i+1)+ ":");
 
@@ -33,6 +33,29 @@ public class Exercice1 {
             scanner.nextLine(); // As nextInt() leaves a nextline /n we have Consume the leftover newline character before calling nextLine again
 
             System.out.println("---------------------------------------------");
+
+            //the first two entries are for taxi
+            if (i<2){
+
+                System.out.println("Entrer le numero de Taxi");
+                String couleur = scanner.nextLine();
+
+                System.out.println("Entrer le nombre des chaises de la voiture");
+                String itineraire = scanner.nextLine();
+
+                //use the taxi constructor
+                voiture[i] = new Taxi(numero,marque,nombrePortes,nombrePneus,nombreChaises, couleur, itineraire);
+                
+                Taxi taxi  = (Taxi)voiture[i];
+                //Affichage des informations entrées
+                System.out.println("Vous venez de créer le taxi" +(i+1)+ " de numero: " +taxi.getNumero()+
+                ", de marque: "+taxi.getMarque()+ ", au nombre des portes: "+taxi.getNombrePortes()+
+                ", au nombre des pneus: "+taxi.getNombrePneus()+ 
+                ", au nombre des chaises: "+taxi.getNombreChaises()+ 
+                ", au couleur " +taxi.getCouleur()+ ", et d'itineraire" +taxi.getItineraire());
+                System.out.println("---------------------------------------------");
+
+            }
             voiture[i] = new Voiture(numero,marque,nombrePortes,nombrePneus,nombreChaises); 
 
             //Affichage des informations entrées
@@ -44,45 +67,45 @@ public class Exercice1 {
 
         }
 
-        for (int j=0; j<2; j++){
+        // for (int j=0; j<2; j++){
 
-            System.out.println("Voiture numero" +(j+1)+ ":");
+        //     System.out.println("Voiture numero" +(j+1)+ ":");
 
-            System.out.println("Entrer le numero du taxi");
-            String numero = scanner.nextLine();
+        //     System.out.println("Entrer le numero du taxi");
+        //     String numero = scanner.nextLine();
 
-            System.out.println("Entrer la marque du taxi");
-            String marque = scanner.nextLine();
+        //     System.out.println("Entrer la marque du taxi");
+        //     String marque = scanner.nextLine();
 
-            System.out.println("Entrer le nombre des portes du taxi");
-            int nombrePortes = scanner.nextInt();
+        //     System.out.println("Entrer le nombre des portes du taxi");
+        //     int nombrePortes = scanner.nextInt();
 
-            System.out.println("Entrer le nombre des pneus du taxi");
-            int nombrePneus = scanner.nextInt();
+        //     System.out.println("Entrer le nombre des pneus du taxi");
+        //     int nombrePneus = scanner.nextInt();
 
-            System.out.println("Entrer le nombre des chaises du taxi");
-            int nombreChaises = scanner.nextInt();
+        //     System.out.println("Entrer le nombre des chaises du taxi");
+        //     int nombreChaises = scanner.nextInt();
 
-            System.out.println("Entrer le numero de Taxi");
-            String couleur = scanner.nextLine();
+        //     System.out.println("Entrer le numero de Taxi");
+        //     String couleur = scanner.nextLine();
 
-            System.out.println("Entrer le nombre des chaises de la voiture");
-            String itineraire = scanner.nextLine();
+        //     System.out.println("Entrer le nombre des chaises de la voiture");
+        //     String itineraire = scanner.nextLine();
 
-            scanner.nextLine(); // As nextInt() leaves a nextline /n we have Consume the leftover newline character before calling nextLine again
+        //     scanner.nextLine(); // As nextInt() leaves a nextline /n we have Consume the leftover newline character before calling nextLine again
 
-            System.out.println("---------------------------------------------");
-            taxi[j] = new Taxi(numero,marque,nombrePortes,nombrePneus,nombreChaises, couleur, itineraire); 
+        //     System.out.println("---------------------------------------------");
+        //     taxi[j] = new Taxi(numero,marque,nombrePortes,nombrePneus,nombreChaises, couleur, itineraire); 
 
-            //Affichage des informations entrées
-            System.out.println("Vous venez de créer le taxi" +(j+1)+ " de numero: " +taxi[j].getNumero()+
-             ", de marque: "+taxi[j].getMarque()+ ", au nombre des portes: "+taxi[j].getNombrePortes()+
-              ", au nombre des pneus: "+taxi[j].getNombrePneus()+ 
-              ", au nombre des chaises: "+taxi[j].getNombreChaises()+ 
-              ", au couleur " +taxi[j].getCouleur()+ ", et d'itineraire" +taxi[j].getItineraire);
-            System.out.println("---------------------------------------------");
+        //     //Affichage des informations entrées
+        //     System.out.println("Vous venez de créer le taxi" +(j+1)+ " de numero: " +taxi[j].getNumero()+
+        //      ", de marque: "+taxi[j].getMarque()+ ", au nombre des portes: "+taxi[j].getNombrePortes()+
+        //       ", au nombre des pneus: "+taxi[j].getNombrePneus()+ 
+        //       ", au nombre des chaises: "+taxi[j].getNombreChaises()+ 
+        //       ", au couleur " +taxi[j].getCouleur()+ ", et d'itineraire" +taxi[j].getItineraire());
+        //     System.out.println("---------------------------------------------");
 
-        }
+        //}
         
         scanner.close();
         //ALTERNATIVE USING THE SETTERS
