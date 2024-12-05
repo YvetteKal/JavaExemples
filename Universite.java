@@ -43,7 +43,15 @@ public class Universite extends Institution{
         // TODO Auto-generated method stub
         super.decrireInstitution();
         System.err.println("L'université a pour nombre des faculté: "+this.getNombreFaculte()+ 
-        ", elle utilise le pour systeme: "+this.getSysteme()+", et a pour nom de recteur: "+this.getNomRecteur());
+        ", elle utilise le pour systeme: "+this.getSysteme()+
+        ", et a pour nom de recteur: "+this.getNomRecteur());
+    }
+
+    //methode d'instance: pOUR 2 University o fait comment??
+    public void getNomRecteurByUniversityName(String name){
+
+        System.out.println("Le nom du recteur de l'université "+name+" est: "+this.getNomRecteur());
+
     }
 
 }

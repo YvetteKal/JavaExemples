@@ -6,6 +6,7 @@ public class Institution {
     private String pays;
     private String type;
     private int anneeCreation;
+    public String className;
 
     //le constructeur
     public Institution(String name, String pays, String type, int anneeCreation){
@@ -13,6 +14,7 @@ public class Institution {
         this.pays = pays;
         this.type = type;
         this.anneeCreation = anneeCreation;
+        this.className = "Institution";
     }
 
     //getters and setters
@@ -44,6 +46,11 @@ public class Institution {
         this.anneeCreation = anneCreation;
     }
 
+    //for renaming purposes
+    public void setClassName(String className){
+        this.className = className;
+    }
+
     //deux methodes d'instance peut modifier l'objet (et est sans static), 
     //une methode de classe est comme en procedural
     //Une méthode d'instance (ou d'objet) a pour but de manipuler les attributs de l'objet.
@@ -59,7 +66,7 @@ public class Institution {
     //      "et a pour age: "+ getAgeInstitution(anneCreation));
     // }
     public void decrireInstitution(){
-        System.out.println("Description de l'instititution "+this.getName()+ " est situé dans le pays: " +this.getPays()+
+        System.out.println("Description de l'"+this.className+ " "+this.getName()+ " est situé dans le pays: " +this.getPays()+
          ", a pour type: "+this.getType()+", a pour annee de creation: "+this.getAnneeCreation()+ 
          "et a pour age: "+ this.getAgeInstitution(this.getAnneeCreation()));
     }
