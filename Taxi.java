@@ -9,4 +9,18 @@ public class Taxi extends Voiture {
         this.couleur = couleur;
         this.itineraire = itineraire;
     }
+
+    public String getCouleur(){
+        return couleur;
+    }
+    public void setCouleur(String couleur){
+        this.couleur = couleur;
+    }
+
+    public String getItineraire(){
+        return itineraire;
+    }
+    public void setItineraire(String itineraire){
+        this.itineraire = itineraire;
+    }
 }

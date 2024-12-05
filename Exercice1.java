@@ -8,9 +8,10 @@ public class Exercice1 {
         Scanner scanner = new Scanner(System.in);
 
         //creer l'objet tableau voiture de la classe Voiture
-        Voiture[] voiture = new Voiture[5]; //tableau des 5 voitures
+        Voiture[] voiture = new Voiture[3]; //tableau des 5 voitures
+        Taxi[] taxi = new Taxi[2];
 
-        for (int i=0; i<5; i++){
+        for (int i=0; i<3; i++){
 
             System.out.println("Voiture numero" +(i+1)+ ":");
 
@@ -42,6 +43,47 @@ public class Exercice1 {
             System.out.println("---------------------------------------------");
 
         }
+
+        for (int j=0; j<2; j++){
+
+            System.out.println("Voiture numero" +(j+1)+ ":");
+
+            System.out.println("Entrer le numero du taxi");
+            String numero = scanner.nextLine();
+
+            System.out.println("Entrer la marque du taxi");
+            String marque = scanner.nextLine();
+
+            System.out.println("Entrer le nombre des portes du taxi");
+            int nombrePortes = scanner.nextInt();
+
+            System.out.println("Entrer le nombre des pneus du taxi");
+            int nombrePneus = scanner.nextInt();
+
+            System.out.println("Entrer le nombre des chaises du taxi");
+            int nombreChaises = scanner.nextInt();
+
+            System.out.println("Entrer le numero de Taxi");
+            String couleur = scanner.nextLine();
+
+            System.out.println("Entrer le nombre des chaises de la voiture");
+            String itineraire = scanner.nextLine();
+
+            scanner.nextLine(); // As nextInt() leaves a nextline /n we have Consume the leftover newline character before calling nextLine again
+
+            System.out.println("---------------------------------------------");
+            taxi[j] = new Taxi(numero,marque,nombrePortes,nombrePneus,nombreChaises, couleur, itineraire); 
+
+            //Affichage des informations entrées
+            System.out.println("Vous venez de créer le taxi" +(j+1)+ " de numero: " +taxi[j].getNumero()+
+             ", de marque: "+taxi[j].getMarque()+ ", au nombre des portes: "+taxi[j].getNombrePortes()+
+              ", au nombre des pneus: "+taxi[j].getNombrePneus()+ 
+              ", au nombre des chaises: "+taxi[j].getNombreChaises()+ 
+              ", au couleur " +taxi[j].getCouleur()+ ", et d'itineraire" +taxi[j].getItineraire);
+            System.out.println("---------------------------------------------");
+
+        }
+        
         scanner.close();
         //ALTERNATIVE USING THE SETTERS
         //create a contructor of class Voiture without parameters called a Default no-argument constructor
