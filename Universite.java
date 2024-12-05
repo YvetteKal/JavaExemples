@@ -37,4 +37,13 @@ public class Universite extends Institution{
         this.nomRecteur = nomRecteur;
     }
 
+    //METHODE POLYMPRPHE: Modification du comportement de la classe fille par rapport à la classe mère
+    @Override
+    public void decrireInstitution() {
+        // TODO Auto-generated method stub
+        super.decrireInstitution();
+        System.err.println("L'université a pour nombre des faculté: "+this.getNombreFaculte()+ 
+        ", elle utilise le pour systeme: "+this.getSysteme()+", et a pour nom de recteur: "+this.getNomRecteur());
+    }
+
 }
