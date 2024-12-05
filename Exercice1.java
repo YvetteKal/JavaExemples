@@ -13,7 +13,7 @@ public class Exercice1 {
 
         for (int i=0; i<5; i++){
 
-            System.out.println("Voiture numero" +(i+1)+ ":");
+            System.out.println("Voiture numero " +(i+1)+ ":");
 
             System.out.println("Entrer le numero de la voiture");
             String numero = scanner.nextLine();
@@ -32,15 +32,16 @@ public class Exercice1 {
 
             scanner.nextLine(); // As nextInt() leaves a nextline /n we have Consume the leftover newline character before calling nextLine again
 
-            System.out.println("---------------------------------------------");
+            
 
             //the first two entries are for taxi
             if (i<2){
+                System.out.println("NB: vous etes entrain d'enregistrer un Taxi");
 
-                System.out.println("Entrer le numero de Taxi");
+                System.out.println("Entrer la couleur de Taxi");
                 String couleur = scanner.nextLine();
 
-                System.out.println("Entrer le nombre des chaises de la voiture");
+                System.out.println("Entrer l'itineraire du taxi");
                 String itineraire = scanner.nextLine();
 
                 //use the taxi constructor
@@ -52,17 +53,20 @@ public class Exercice1 {
                 ", de marque: "+taxi.getMarque()+ ", au nombre des portes: "+taxi.getNombrePortes()+
                 ", au nombre des pneus: "+taxi.getNombrePneus()+ 
                 ", au nombre des chaises: "+taxi.getNombreChaises()+ 
-                ", au couleur " +taxi.getCouleur()+ ", et d'itineraire" +taxi.getItineraire());
+                ", au couleur " +taxi.getCouleur()+ ", et d'itineraire: " +taxi.getItineraire());
                 System.out.println("---------------------------------------------");
 
-            }
-            voiture[i] = new Voiture(numero,marque,nombrePortes,nombrePneus,nombreChaises); 
+            }else{
 
-            //Affichage des informations entrées
-            System.out.println("Vous venez de créer la voiture " +(i+1)+ " de numero: " +voiture[i].getNumero()+
-             ", de marque: "+voiture[i].getMarque()+ ", au nombre des portes: "+voiture[i].getNombrePortes()+
-              ", au nombre des pneus: "+voiture[i].getNombrePneus()+ 
-              ", et au nombre des chaises: "+voiture[i].getNombreChaises());
+                voiture[i] = new Voiture(numero,marque,nombrePortes,nombrePneus,nombreChaises); 
+
+                //Affichage des informations entrées
+                System.out.println("Vous venez de créer la voiture " +(i+1)+ " de numero: " +voiture[i].getNumero()+
+                ", de marque: "+voiture[i].getMarque()+ ", au nombre des portes: "+voiture[i].getNombrePortes()+
+                ", au nombre des pneus: "+voiture[i].getNombrePneus()+ 
+                ", et au nombre des chaises: "+voiture[i].getNombreChaises());
+                
+            }
             System.out.println("---------------------------------------------");
 
         }
