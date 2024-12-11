@@ -1,16 +1,18 @@
 public class Universite extends Institution{   
 
     //attributs supplementaires 
-    int nombreFaculte;
-    String systeme;
-    String nomRecteur;
+    private int nombreFaculte;
+    private String systeme;
+    private String nomRecteur;
+
 
     //constructeur
-    public Universite(String name, String pays, String type, int anneeCreation, int nombreFaculte, String systeme, String nomRecteur){
-        super(name, pays, type, anneeCreation);
+    public Universite(String nomInstitution, String paysInstitution, String typeInstitution, int anneeCreation, int nombreFaculte, String systeme, String nomRecteur){
+        super(nomInstitution, paysInstitution, typeInstitution, anneeCreation);
         this.nombreFaculte = nombreFaculte;
         this.systeme = systeme;
         this.nomRecteur = nomRecteur;
+        super.setClassName("Université");
 
     }
 
@@ -42,16 +44,22 @@ public class Universite extends Institution{
     public void decrireInstitution() {
         // TODO Auto-generated method stub
         super.decrireInstitution();
-        System.err.println("L'université a pour nombre des faculté: "+this.getNombreFaculte()+ 
-        ", elle utilise le pour systeme: "+this.getSysteme()+
-        ", et a pour nom de recteur: "+this.getNomRecteur());
+        System.out.println("Nombre des faculté: "+this.getNombreFaculte()+ "\n"+
+        "Systeme: "+this.getSysteme()+"\n"+
+        "Nom du recteur: "+this.getNomRecteur()
+
+        );
     }
 
-    //methode d'instance: pOUR 2 University o fait comment??
-    public void getNomRecteurByUniversityName(String name){
-
-        System.out.println("Le nom du recteur de l'université "+name+" est: "+this.getNomRecteur());
-
+    //methode d'instance
+    // public void getNomRecteurByUniversityName(Universite u1, Universite u2){
+    //     System.out.println("Le nom du recteur de l'université 1 nommé, "+u1.getName()+" est: "+u1.getNomRecteur());
+    //     System.out.println("Le nom du recteur de l'université 2 nommé, "+u2.getName()+" est: "+u2.getNomRecteur());
+    // }
+    //methode d'instance
+    public void getNomRecteurByUniversite(Universite u1, Universite u2){
+        System.out.println("Le nom du recteur de l'université 1 nommé, "+u1.getName()+" est: "+u1.getNomRecteur());
+        System.out.println("Le nom du recteur de l'université 2 nommé, "+u2.getName()+" est: "+u2.getNomRecteur());
     }
 
 }

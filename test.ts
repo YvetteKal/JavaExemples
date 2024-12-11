@@ -1,6 +1,12 @@
 
 class Person {
-    private name
-    
+    name: string
+
     constructor() {}
+}
+
+class User extends Person {
+    getUser() {
+        this.
+    }
 }

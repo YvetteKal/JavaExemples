@@ -5,8 +5,8 @@ public class Ecole extends Institution{
     private String promoteur;
 
     //constructor
-    public Ecole(String name, String pays, String type, int anneeCreation, String typeEcole, int nombreClasse, String promoteur){
-        super(name, pays, type, anneeCreation);
+    public Ecole(String nomInstitution, String paysInstitution, String typeInstitution, int anneeCreation, String typeEcole, int nombreClasse, String promoteur){
+        super(nomInstitution, paysInstitution, typeInstitution, anneeCreation);
         this.typeEcole = typeEcole;
         this.nombreClasse = nombreClasse;
         this.promoteur = promoteur;
@@ -40,14 +40,16 @@ public class Ecole extends Institution{
     @Override
     public void decrireInstitution(){
         super.decrireInstitution();
-        System.out.println("L'ecole a pour type: "+this.getTypeEcole()+
-        ", elle a pour nombre des classes: "+this.getNombreClasse()+
-        ", et pour promoteur"+this.getPromoteur());
+        System.out.println("Type: "+getTypeEcole()+ "\n"+
+        "Nombre des classes: "+getNombreClasse()+ "\n"+
+        "Promoteur: "+getPromoteur());
     }
 
-    //seconde methode d'instance: POUR 3 ECOLES on fait comment??
-    public void getNomPromoteurParEcole(String nom){
-        System.out.println("Le nom du promoteur de l'ecole "+nom+ "est: "+this.promoteur);
+    //seconde methode d'instance
+    public void getNomPromoteurParEcole(Ecole e1, Ecole e2, Ecole e3){
+        System.out.println("Le nom du promoteur de l'ecole 1 nommé "+e1.getName()+ "est: "+e1.getPromoteur());
+        System.out.println("Le nom du promoteur de l'ecole 2 nommé "+e2.getName()+ "est: "+e2.getPromoteur());
+        System.out.println("Le nom du promoteur de l'ecole 3 nommé "+e3.getName()+ "est: "+e3.getPromoteur());
     }
 
 

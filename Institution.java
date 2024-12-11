@@ -1,42 +1,41 @@
-import java.time.LocalDate;
 
 public class Institution {
     //les variables d'instance
-    private String name;
-    private String pays;
-    private String type;
+    private String nomInstitution;
+    private String paysInstitution;
+    private String typeInstitution;
     private int anneeCreation;
-    public String className;
+    public String className;//mine
 
     //le constructeur
-    public Institution(String name, String pays, String type, int anneeCreation){
-        this.name = name;
-        this.pays = pays;
-        this.type = type;
+    public Institution(String nomInstitution, String paysInstitution, String typeInstitution, int anneeCreation){
+        this.nomInstitution = nomInstitution;
+        this.paysInstitution = paysInstitution;
+        this.typeInstitution = typeInstitution;
         this.anneeCreation = anneeCreation;
         this.className = "Institution";
     }
 
     //getters and setters
     public String getName(){
-        return name;
+        return nomInstitution;
     }
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public String getPays(){
-        return pays;
-    }
-    public void setPays(String pays){
-        this.pays = pays;
+    public void setName(String nomInstitution){
+        this.nomInstitution = nomInstitution;
     }
 
-    public String getType(){
-        return type;
+    public String getPaysInstitution(){
+        return paysInstitution;
     }
-    public void setType(String type){
-        this.type = type;
+    public void setPaysInstitution(String paysInstitution){
+        this.paysInstitution = paysInstitution;
+    }
+
+    public String getTypeInstitution(){
+        return typeInstitution;
+    }
+    public void setTypeInstitution(String typeInstitution){
+        this.typeInstitution = typeInstitution;
     }
 
     public int getAnneeCreation(){
@@ -55,24 +54,21 @@ public class Institution {
     //une methode de classe est comme en procedural
     //Une méthode d'instance (ou d'objet) a pour but de manipuler les attributs de l'objet.
     //Si ce n'est pas le cas alors ta méthode doit surement être statique (de classe)
-    public int getAgeInstitution(int annee){
-        int year = LocalDate.now().getYear();
-        int age = year-annee;
-        return age;
+    public int getAgeInstitution(){
+        return java.time.Year.now().getValue() - anneeCreation;
     }
     // public void decrireInstitution(String name, int anneCreation){
     //     System.out.println("L'instititution "+name+ " est situé dans le pays: " +this.getPays()+
     //      "a pourtype: "+this.getType()+", a pour annee de creation: "+this.getAnneeCreation()+ 
     //      "et a pour age: "+ getAgeInstitution(anneCreation));
     // }
-    public void decrireInstitution(){
-        System.out.println("Description de l'"+this.className+ " "+this.getName()+ " est situé dans le pays: " +this.getPays()+
-         ", a pour type: "+this.getType()+", a pour annee de creation: "+this.getAnneeCreation()+ 
-         "et a pour age: "+ this.getAgeInstitution(this.getAnneeCreation()));
+    // Updated `decrireInstitution` method in Institution
+    public void decrireInstitution() {
+        System.out.println(this.className+": " + this.nomInstitution + "\n" +
+            "Pays: " + this.paysInstitution + "\n" +
+            "Type: " + this.typeInstitution + "\n" +
+            "Année de création: " + this.anneeCreation + "\n" +
+            "Âge: " + this.getAgeInstitution() + " ans"); 
     }
-
-    
-
-
 
 }
