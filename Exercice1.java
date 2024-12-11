@@ -58,13 +58,18 @@ public class Exercice1 {
 
             }else{
 
-                voiture[i] = new Voiture(numero,marque,nombrePortes,nombrePneus,nombreChaises); 
+                try{
+                    voiture[i] = new Voiture(numero,marque,nombrePortes,nombrePneus,nombreChaises); 
+                    //Affichage des informations entrées
+                    System.out.println("Vous venez de créer la voiture " +(i+1)+ " de numero: " +voiture[i].getNumero()+
+                    ", de marque: "+voiture[i].getMarque()+ ", au nombre des portes: "+voiture[i].getNombrePortes()+
+                    ", au nombre des pneus: "+voiture[i].getNombrePneus()+ 
+                    ", et au nombre des chaises: "+voiture[i].getNombreChaises());
+                }catch (NombrePneuseException e){
+                    System.out.println("L'exception " +e+ " a été levé");
 
-                //Affichage des informations entrées
-                System.out.println("Vous venez de créer la voiture " +(i+1)+ " de numero: " +voiture[i].getNumero()+
-                ", de marque: "+voiture[i].getMarque()+ ", au nombre des portes: "+voiture[i].getNombrePortes()+
-                ", au nombre des pneus: "+voiture[i].getNombrePneus()+ 
-                ", et au nombre des chaises: "+voiture[i].getNombreChaises());
+                }
+                System.out.println("la voiture n'a pas ete créé mais le programme continue");            
                 
             }
             System.out.println("---------------------------------------------");

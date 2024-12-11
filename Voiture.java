@@ -7,12 +7,18 @@ public class Voiture{
     private int nombreChaises;
 
     //le constructeur de la classe voiture
-    public Voiture(String numero, String marque, int nombrePortes, int nombrePneus, int nombreChaises ){
-        this.numero = numero;
-        this.marque = marque;
-        this.nombrePortes = nombrePortes; 
-        this.nombrePneus = nombrePneus;
-        this.nombreChaises = nombreChaises;
+    public Voiture(String numero, String marque, int nombrePortes, int nombrePneus, int nombreChaises ) throws NombrePneuseException{
+        if (nombrePneus < 0){
+            throw new NombrePneuseException();
+
+        }else {
+            this.numero = numero;
+            this.marque = marque;
+            this.nombrePortes = nombrePortes; 
+            this.nombrePneus = nombrePneus;
+            this.nombreChaises = nombreChaises;
+        }
+        
     }
 
     //les getters et les setters
