@@ -133,53 +133,6 @@ public class Exercice4 {
             // }
         } 
         
-        //Question 6
-        //resolution ax2 + bx + c = 0
-        System.out.println("---------------Q6------------------");
-        System.out.println("Entrer le coefficient a (non nul)");
-        double ca = sc.nextInt(); //ca = coefficient a
-
-        System.out.println("Entrer le coefficient b");
-        double cb = sc.nextInt();
-
-        System.out.println("Entrer le coefficient c");
-        double cc = sc.nextInt();
-
-        //delta = b2 -4ac
-        double delta = (Math.pow(2, cb)) - 4*(ca*cc);
-
-        // Afficher le discriminant
-        System.out.println("Le discriminant (Δ) est : " + delta);
-
-        //calcul des racines
-        //x1,x2 = -b+-sqrt (delta)/2b
-        double x1, x2;
-
-        if (delta > 0){
-
-            x1 = (-cb + Math.sqrt(delta))/(2*ca);
-            x2 = (-cb - Math.sqrt(delta))/(2*ca);
-            System.out.println("Les racines sont : x1 = " + x1 + " et x2 = " + x2);
-
-        }else if (delta == 0){
-            //une recine reelle double
-            x1 = -cb/(2*ca);
-            System.out.println("La racine double est : x1 = x2 = " + x1);
-
-        }else{
-            //racines complexes
-            // double i = Math.sqrt(-1);
-            // x1 = (-cb + i * Math.sqrt(-delta))/(2*ca);
-            // x2 = (-cb - i * Math.sqrt(-delta))/(2*ca);
-            // System.out.println("Les recines imaginaires sont: x1 = " + x1 + " et x2 = " + x2);
-            // Racines complexes
-            double realPart = -b / (2 * a);
-            double imaginaryPart = Math.sqrt(-delta) / (2 * a);
-            System.out.println("Les racines complexes sont : x1 = " + realPart + " - " + imaginaryPart + 
-            "i et x2 = " + realPart + " + " + imaginaryPart + "i");
-
-
-        }
    
     }
 
