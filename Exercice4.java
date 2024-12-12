@@ -105,11 +105,34 @@ public class Exercice4 {
         }else{
             System.out.println("Le nombre des nombres doit etre inferieur au nombre de depart");
         }
-        
 
+        //Question 5
+        System.out.println("---------------Q5------------------");
+        System.out.println("Entrer un nombre entier positif");
+        int number = sc.nextInt();
 
+        // Vérifier que le nombre est positif
+        if (nombre <= 0) {
+            System.out.println("Veuillez entrer un nombre entier positif.");
+        } else {
 
-        
+            int somme = 0;
+
+            for(int i=1; somme < number; i++){
+                somme = somme + i;
+            }
+            System.out.println("La somme des nombres entiers qui precedent "+number+" est: " +somme);
+
+            //another method instead of the for loop.
+            // int i = 1;
+
+            // // Ajouter les entiers naturels jusqu'à ce que la somme soit supérieure ou égale au nombre
+            // while (somme < nombre) {
+            //     somme += i;
+            //     i++;
+            // }
+        }    
+   
     }
 
 
