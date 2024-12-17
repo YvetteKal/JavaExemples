@@ -16,7 +16,7 @@ public class Exercice5 {
         double cc = sc.nextInt();
 
         //afficher l'equatio a resoudre
-        System.out.println("L'equation à resoudre est: "+ca+ "x2 + "+cb+ "x + "+cc);
+        System.out.println("L'equation à resoudre est: "+ca+ "x^2 + "+cb+ "x + "+cc);
 
         //calcul de delta
         double delta = EquationSecondDegre.calculDelta(ca, cb, cc);

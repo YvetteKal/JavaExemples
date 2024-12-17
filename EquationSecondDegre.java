@@ -1,5 +1,6 @@
 
 public class EquationSecondDegre {
+    //uses Exericice 5 file
     // fonction pour calculer delta
     public static double calculDelta(double ca, double cb, double cc){
         //delta = b2 -4ac
