@@ -46,7 +46,7 @@ public class Exercice2 {
         //if the method getNomRecteurByUniversite() was static. we could call it using Universite.getNomRecteurByUniversite();
         //but as our method is an instance method, we have to call it on an object of University type,
         //here as the method already has two objects as parameters, we call it using the constructor with null parameters.
-        new Universite(null, null, null, 0, 0, null, null).getNomRecteurByUniversite(universite1, universite2);
+        new University(null, null, null, 0, 0, null, null).getNomRecteurByUniversite(universite1, universite2);
 
         System.out.println("----------------------------------");
         new Ecole(null, null, null, 0, null, 0, null).getNomPromoteurParEcole(ecole1, ecole2, ecole3);

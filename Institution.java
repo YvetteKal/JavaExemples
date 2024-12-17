@@ -1,10 +1,10 @@
 
 public class Institution {
     //les variables d'instance
-    private String nomInstitution;
-    private String paysInstitution;
-    private String typeInstitution;
-    private int anneeCreation;
+    public String nomInstitution;
+    public String paysInstitution;
+    public String typeInstitution;
+    public int anneeCreation;
     public String className;//mine
 
     //le constructeur

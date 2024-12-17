@@ -15,7 +15,7 @@ public class Universite extends Institution{
         super.setClassName("Université");
 
     }
-
+ 
     //getters and setters
     //herite les getters and setters pour les characteristiques communes
     public int getNombreFaculte(){
